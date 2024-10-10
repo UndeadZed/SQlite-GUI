@@ -1,5 +1,5 @@
 
-# SQlite-GUI database creator/editor streamlit app
+# <centered> SQlite-GUI database creator/editor streamlit app </centered>
 
 ## Overview
 A simple streamlit app made to allow for creating databases through a GUI without having to go through the hassle of writing the SQLite queries yourself.
@@ -11,3 +11,6 @@ The motivation behind this initiative stemmed from the need to create an easy wa
 The requirements are that you have python 3.9 or higher installed and install all the libraries listed in the requirements.txt file.
 
 ## How it Works
+
+### there are basically 4 pages in this app which are all linked to database creation and managemnt
+

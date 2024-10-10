@@ -1,7 +1,29 @@
+# general libraries
 import sqlite3
 import pandas as pd
 import streamlit as st
 from utils import *
+import os
+# chatbot libraries
+import requests
+from bs4 import BeautifulSoup
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain.prompts import PromptTemplate
+from langchain.chains import LLMChain
+from langchain_community.tools import DuckDuckGoSearchResults
+from langchain.prompts import PromptTemplate
+from langchain.chains import LLMChain
+from langchain.agents import initialize_agent, AgentType
+from langchain_community.tools import ShellTool
+from langchain.agents import load_tools
+GOOGLE_API_KEY = "Google API key"
+llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=GOOGLE_API_KEY)
+os.environ['SERPAPI_API_KEY'] ='SERAPAPI API key'
+tools = load_tools(["serpapi","llm-math"], llm=llm)
+
+# here we just make the agent
+global agent
+agent = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, verbose=True)
 
 
 # ---------------------------------------------- Data Operations ---------------------------------------------
@@ -207,9 +229,6 @@ def Table_viewer_page():
 
 
 # ============================================= DB assistant page ====================================
-import streamlit as st
-import streamlit
-
 
 def db_assistant_page():
     with st.sidebar:
@@ -241,7 +260,8 @@ def db_assistant_page():
 
     # Function for generating LLaMA2 response
     def generate_llama2_response(prompt_input):
-        output = "noice thanks"
+        global agent
+        output = agent.run(prompt_input)
         return output
 
     # User-provided prompt

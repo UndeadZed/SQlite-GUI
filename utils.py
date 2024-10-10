@@ -4,6 +4,7 @@ import pandas as pd
 
 
 
+
 # ============================================= Display functions ==========================================
 
 # Function to connect to the SQLite database and fetch table data

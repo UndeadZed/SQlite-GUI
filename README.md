@@ -14,8 +14,8 @@ The requirements are that you have python 3.9 or higher installed and install al
 
 ### there are basically 4 pages in this app which are all linked to database creation and managemnt
 
-#### 1- Table Viewer:
-#### 2- Table Operations:
-#### 3- Data Operations:
-#### 4- Database Assistant:
+#### 1- Table Viewer: a page which uses pandas and streamlit to load the data of the table into a dataframe and display it effectively showing the table
+#### 2- Table Operations: a page for any table operations that you might need which are basically creating and deleting tables as well as inserting and removing columns and rows
+#### 3- Data Operations: a page which edits the data inside the table effectively deleting or editing a row
+#### 4- Database Assistant: a page which uses a llama based llm (hasn't been decided yet probably code llama tho) to allow for database operation execution via natural language by conversing with the database Assistant
 

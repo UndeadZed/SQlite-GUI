@@ -23,3 +23,10 @@ first you need to write the following commands in the terminal
 #### 3- Data Operations: a page which edits the data inside the table effectively deleting or editing a row
 #### 4- Database Assistant: a page which uses a llama based llm (hasn't been decided yet probably code llama tho) to allow for database operation execution via natural language by conversing with the database Assistant
 
+## Additional notes:
+1. We are currently in the process of developing a Google Colab notebook utilizing this repository, which will be made available shortly. 
+2. The local version of this application will implement alternative APIs for the development of the database assistant, deliberately omitting the use of local LLMs to conserve resources.
+3. Conversely, the Colab version will incorporate the LLAMA 3.1 and LLAMA 2 local LLMs, which are presently under development.
+4. It is important to note that the existing codebase requires significant refinement; thus, following the completion of the Colab notebook, our primary focus will shift toward streamlining and enhancing the overall quality of the code.
+
+
